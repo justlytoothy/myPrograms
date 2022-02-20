@@ -27,7 +27,8 @@ pl.view.updateBook = {
           formEl.isbn.value = book.isbn;
           formEl.title.value = book.title;
           formEl.year.value = book.year;
-        } else {
+        } 
+        else {
           formEl.reset();
         }
     });
