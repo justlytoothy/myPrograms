@@ -1,6 +1,6 @@
-/***********************************************
-***  Methods for the use case updateBook  ******
-************************************************/
+/*
+Update Book Methods
+*/
 pl.view.updateBook = {
   setupUserInterface: function () {
     var formEl = document.forms['Book'],

@@ -1,7 +1,6 @@
-/**
- * @fileOverview  Contains various view functions for the use case listBooks
- * @author Gerd Wagner
- */
+/*
+List Book Methods
+*/
  pl.view.listBooks = {
   setupUserInterface: function () {
     var tableBodyEl = document.querySelector("table#books>tbody");

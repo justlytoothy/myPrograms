@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link href="../css/mystyles.css" rel="stylesheet" />
+        <link href="../css/bootstrap.css" rel="stylesheet" />
         <script src="src/ctrl/initialize.js"></script>
         <script src="src/model/Book.js"></script>
     </head>
@@ -20,22 +21,27 @@
                         <li><a href="#" target="_self" title="FlexBox">Public Library</a></li>
                     </ul>
                 </nav>
-                <article>
-                    <menu class="linkBox">
-                        <button class="button" type="button" onclick="location.href='listBooks.html'"><span>View Library Catalog</span></button>
-                        <button class="button" type="button" onclick="location.href='createBook.html'"><span>Add a new book</span></button>
-                        <button class="button" type="button" onclick="location.href='updateBook.html'"><span>Change book details</span></button>
-                        <button class="button" type="button" onclick="location.href='deleteBook.html'"><span>Delete a book</span></button>
-                        <button class="button" type="button" onclick="Book.clearData()"><span>Clear Database</span></button>
-                        <button class="button" type="button" onclick="Book.createTestData()" style="vertical-align:middle"><span>Create Test Data</span></button>
-                    </menu>
-                </article>
+                <div class="container">
+                    <div class="row">
+                        <div><br><br><br></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm d-flex justify-content-center">
+                            <button class="button" type="button" onclick="location.href='listBooks.html'"><span>View Library Catalog</span></button>
+                            <button class="button" type="button" onclick="location.href='createBook.html'"><span>Add a new book</span></button>
+                            <button class="button" type="button" onclick="location.href='updateBook.html'"><span>Change book details</span></button>
+                            <button class="button" type="button" onclick="location.href='deleteBook.html'"><span>Delete a book</span></button>
+                            <button class="button" type="button" onclick="Book.clearData()"><span>Clear Database</span></button>
+                            <button class="button" type="button" onclick="Book.createTestData()" style="vertical-align:middle"><span>Create Test Data</span></button>
+                        </div>
+                    </div>
+                </div>
             </section>
             <div class="push"></div>
         </div>
             
         <footer class="footer">
-            <p>Footer</p>
+            <p>Jake Schilling Public Library Example App</p>
         </footer>
             
     </body>

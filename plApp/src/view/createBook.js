@@ -1,6 +1,6 @@
-/***********************************************
-***  Methods for the use case createBook  ******
-************************************************/
+/*
+Create Book Methods
+*/
 pl.view.createBook = {
   setupUserInterface: function () {
     var saveButton = document.forms['Book'].commit;

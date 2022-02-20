@@ -1,6 +1,6 @@
-/***********************************************
-***  Methods for the use case "delete book"  ***
-************************************************/
+/*
+Delete Book Methods
+*/
 pl.view.deleteBook = {
   setupUserInterface: function () {
     var deleteButton = document.forms['Book'].commit;
