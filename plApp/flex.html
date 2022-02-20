@@ -21,13 +21,13 @@
                     </ul>
                 </nav>
                 <article>
-                    <menu>
-                        <li><a href="listBooks.html">List all books</a></li>
-                        <li><a href="createBook.html">Add a new book</a></li>
-                        <li><a href="updateBook.html">Update a book</a></li>
-                        <li><a href="deleteBook.html">Delete a book</a></li>
-                        <li><button class="button" type="button" onclick="Book.clearData()"><span>Clear Database</span></button>
-                        <li><button class="button" type="button" onclick="Book.createTestData()" style="vertical-align:middle"><span>Create Test Data</span></button></li>
+                    <menu class="linkBox">
+                        <button class="button" type="button" onclick="location.href='listBooks.html'"><span>View Library Catalog</span></button>
+                        <button class="button" type="button" onclick="location.href='createBook.html'"><span>Add a new book</span></button>
+                        <button class="button" type="button" onclick="location.href='updateBook.html'"><span>Change book details</span></button>
+                        <button class="button" type="button" onclick="location.href='deleteBook.html'"><span>Delete a book</span></button>
+                        <button class="button" type="button" onclick="Book.clearData()"><span>Clear Database</span></button>
+                        <button class="button" type="button" onclick="Book.createTestData()" style="vertical-align:middle"><span>Create Test Data</span></button>
                     </menu>
                 </article>
             </section>
