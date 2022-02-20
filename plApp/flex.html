@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" vocab="http://schema.org/" typeof="WebApplication">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link href="../css/mystyles.css" rel="stylesheet" />
+        <script src="src/ctrl/initialize.js"></script>
+        <script src="src/model/Book.js"></script>
+    </head>
+    <body id="page-top">
+        <div class="wrapper">
+            <header>
+                <h1>Public Library App</h1>
+            </header>
+            <section>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html" target="_self" title="Home page">Home</a></li>
+                        <li><a href="../html/first.html" target="_self" title="First App">First App</a></li>
+                        <li><a href="#" target="_self" title="FlexBox">Public Library</a></li>
+                    </ul>
+                </nav>
+                <article>
+                    <menu>
+                        <li><a href="listBooks.html">List all books</a></li>
+                        <li><a href="createBook.html">Add a new book</a></li>
+                        <li><a href="updateBook.html">Update a book</a></li>
+                        <li><a href="deleteBook.html">Delete a book</a></li>
+                        <li><button class="button" type="button" onclick="Book.clearData()"><span>Clear Database</span></button>
+                        <li><button class="button" type="button" onclick="Book.createTestData()" style="vertical-align:middle"><span>Create Test Data</span></button></li>
+                    </menu>
+                </article>
+            </section>
+            <div class="push"></div>
+        </div>
+            
+        <footer class="footer">
+            <p>Footer</p>
+        </footer>
+            
+    </body>
+</html>
+            
+            
