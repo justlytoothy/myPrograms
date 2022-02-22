@@ -1,17 +1,16 @@
-const loginForm = document.getElementById("loginForm");         //Declare all constant references to elements on page
-const loginButt = document.getElementById("subLogin");
-const loginErrMsg = document.getElementById("errMsgCon");
+const loginForm = document.getElementById("login-form");
+const loginButton = document.getElementById("login-form-submit");
+const loginErrorMsg = document.getElementById("login-error-msg");
 
-loginButt.addEventListener("click", (e) => {
+loginButton.addEventListener("click", (e) => {
     e.preventDefault();
-    const username = loginForm.uname.value;
-    const password = loginForm.pword.value;
+    const username = loginForm.username.value;
+    const password = loginForm.password.value;
 
-    if (username == "user" && password == "pass") {
-        alert("You have succesfuly logged in!");
+    if (username === "user" && password === "web_dev") {
+        alert("You have successfully logged in.");
         location.reload();
     } else {
-        loginErrMsg.style.opacity = 1;
+        loginErrorMsg.style.opacity = 1;
     }
 })
-
