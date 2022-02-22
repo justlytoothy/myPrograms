@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <link href="../css/mystyles.css" rel="stylesheet" />
         <link href="../css/bootstrap.css" rel="stylesheet" />
+        <script defer src="login.js"></script>
     </head>
     <body>
         <div class="container">
             <div class="row">
                 <div class="col-sm">
                     <h1 style="text-align: center;">Please Login To Continue</h1>
-                    <br><br>
+                    <div id="errMsgCon" style="text-align: center;">
+                        <p id="errMsg">Invalid username <span id="errMsgL2">and/or password</span></p>
+                    </div>
                     </div>
             </div>
             <div class="row">
                 <div class="col-sm d-flex justify-content-center" style="flex-direction: row;">
-                        <form id="login" class="loginBox">
+                        <form id="loginForm" class="loginBox">
                             <br><br>
-                            <div class="d-flex justify-content-center" style="flex-direction: column;">
                                 <label style="text-align: center;" for="uname">Username</label>
-                                <input type="text" id="uname" name="uname">
+                                <input type="text" id="uname" name="uname" placeholder="Username">
                                 <br>
                                 <label style="text-align: center;" for="pword">Password</label>
-                                <input type="text" id="pword" name="pword">
+                                <input type="password" id="pword" name="pword" placeholder="Password">
                                 <br>
-                                <input type="submit" id="sublogin" value="Login">
-
-                            </div>
+                                <input type="submit" id="subLogin" value="Login">
                         </form>
                 </div>
             </div>
