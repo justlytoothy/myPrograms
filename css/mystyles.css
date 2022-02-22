@@ -112,3 +112,9 @@ table, th {
     flex: 1;
     text-align: center;
 }
+
+.loginBox {
+    background-color: beige;
+    width: 40%;
+    height: 300px;
+}
