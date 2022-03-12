@@ -1,15 +1,18 @@
 const rainButton = document.getElementById("rainButt");
+const myPic = document.getElementById("newImg");
 
 rainButton.addEventListener("click", (e) => {
-    if (confirm("Would you like to see a rainbow?")) {
-        console.log("Fetching Rainbow Now!");
-        fetch('rainbow.jpg')
-            .then(response => {
-                alert(response);
-                return response.blob();
-        })
-        .then(response => {
-            alert(response);
-        })
+    e.preventDefault();
+    if (confirm("Would you like to see a doggo?")) {
+        try {
+            fetch('https://dog.ceo/api/breeds/image/random')
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+                myPic.src = result.message;
+            })
+        } catch (error) {
+            alert(error + " was caught");
+        }
     }
 });
