@@ -1,8 +1,13 @@
 const currTo = document.getElementById("currTo");
 const currFrom = document.getElementById("currFrom");
-const resultText = document.getElementById(resultText);
+const resultText = document.getElementById("resultText");
 const convertButton = document.getElementById("convertButt");
-let currMap = new Map();
+const fromNum = document.getElementById("currFromNum");
+let actualValue;
+let beginning;
+let ending;
+let currMap;
+let beginNum;
 
 document.addEventListener("DOMContentLoaded", () => {
     getCurrValues();
@@ -10,10 +15,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function getCurrValues() {
     try {
-        fetch("https://openexchangerates.org/api/latest.json?app_id=YOUR_APP_ID")
+        fetch("https://openexchangerates.org/api/latest.json?app_id=a062130478a942ad997f3f9167283bee")
         .then (result => result.json())
         .then (res => {
-            
+            currMap = res.rates;
+            for(const key in currMap) {
+                var opt = document.createElement("option");
+                opt.value= key;
+                opt.innerHTML = key; // whatever property it has
+
+                // then append it to the select element
+                currToSel.appendChild(opt);
+            }
+            index = 0;
+            for(const key in currMap) {
+                var opt = document.createElement("option");
+                opt.value= key;
+                opt.innerHTML = key; // whatever property it has
+
+                // then append it to the select element
+                currFromSel.appendChild(opt);
+            }
         })
     } catch (err) {
         alert(err + " was caught!");
@@ -22,13 +44,29 @@ function getCurrValues() {
 
 
 convertButton.addEventListener("click", () => {
-    //Fill in the conversion function here
+    convertEm();
+
 })
 
 currTo.addEventListener("change", () => {
-    //Fill in with what to do when value in dropdown changed
+    ending = currToSel.value;
+    console.log(ending);
 })
 
 currFrom.addEventListener("change", () => {
-    //Fill in with what to do when value in dropdown changed
+    beginning = currFromSel.value;
+    console.log(beginning);
 })
+
+fromNum.addEventListener("input", () => {
+    beginNum = fromNum.value;
+    console.log(beginNum);
+})
+
+
+
+function convertEm() {
+    let beginNumConv = beginNum / currMap[beginning];
+    actualValue = beginNumConv * currMap[ending];
+    console.log(`${beginNum} ${beginning} is equal to ${actualValue} ${ending}`);
+}
