@@ -7,12 +7,39 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/currConv.css">
+        <script defer src="../js/currConv.js"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <div id="biigBox">
+            <div id="bigBox">
+                <div id="currFrom">
+                    <label for="currFrom">Choose Currency From:</label>
+                    <select name="currFrom", id="currFromSel">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="JPY">JPY</option>
+                        <option value="GBP">GBP</option>
+                        <option value="CHF">CHF</option>
+                    </select>
+                </div>
+                <div id="currTo">
+                    <label for="currTo">Choose Currency To:</label>
+                    <select name="currTo", id="currToSel">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="JPY">JPY</option>
+                        <option value="GBP">GBP</option>
+                        <option value="CHF">CHF</option>
+                    </select>
+                </div>
+                <div id="currFinal">
+                    <button style="width: 50%; margin-left: 25%; height: 2rem;" type="button" id="convertButt">Convert</button>
+                </div>
+            </div>
+            <div id="results">
+                <h1 id="resultText"></h1>
+            </div>
+        </div>
         
-        <script src="" async defer></script>
     </body>
 </html>

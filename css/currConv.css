@@ -122,3 +122,38 @@ table, th {
 #errMsgCon {
     opacity: 0;
 }
+
+#biigBox {
+    display: flex;
+    background-color: beige;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 10%;
+    height: 65%;
+    flex-direction: column;
+
+}
+
+#bigBox {
+    display: flex;
+    width: 90%;
+    background-color: white;
+    height: 50%;
+    align-items: center;
+
+}
+#currFrom {
+    flex: 1;
+    background-color: aliceblue;
+}
+
+#currTo {
+    flex: 1;
+    background-color: blue;
+}
+#currFinal {
+    flex: 1;
+    background-color: gold;
+}
