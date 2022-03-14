@@ -68,5 +68,6 @@ fromNum.addEventListener("input", () => {
 function convertEm() {
     let beginNumConv = beginNum / currMap[beginning];
     actualValue = beginNumConv * currMap[ending];
-    console.log(`${beginNum} ${beginning} is equal to ${actualValue} ${ending}`);
+    let message = `$${beginNum} ${beginning} is equal to $${actualValue} ${ending}`;
+    resultText.innerHTML = message;
 }

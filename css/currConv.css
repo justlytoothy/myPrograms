@@ -155,5 +155,5 @@ table, th {
 }
 #currFinal {
     flex: 1;
-    background-color: gold;
+    background-color: inherit;
 }
